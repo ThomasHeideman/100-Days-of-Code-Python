@@ -1,0 +1,9 @@
+# Negeer alle solution bestanden
+solution.py
+
+# Negeer mappen die met .idea te maken hebben (PyCharm instellingen)
+.idea/
+
+# Negeer Python cache bestanden
+__pycache__/
+*.pyc
