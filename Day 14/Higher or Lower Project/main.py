@@ -1,21 +1,7 @@
 from game_data import data
 from art import logo
 from art import vs
-from random import randint
 from random import choice
-
-
-def check_answer(followers_a,followers_b):
-    """
-        Compares the follower counts and returns the winner's letter.
-        :param followers_a: The number of followers for account A.
-        :param followers_b: The number of followers for account B.
-        :return: A string 'a' or 'b' based on who has more followers.
-        """
-    if followers_a > followers_b:
-        return 'a'
-    else:
-        return 'b'
 
 def get_random_item(current_item=None):
     """
@@ -39,6 +25,17 @@ def format_data(account):
     country = account["country"]
     return f"{name}, a {description}, from {country}"
 
+def check_answer(followers_a,followers_b):
+    """
+        Compares the follower counts and returns the winner's letter.
+        :param followers_a: The number of followers for account A.
+        :param followers_b: The number of followers for account B.
+        :return: A string 'a' or 'b' based on who has more followers.
+        """
+    if followers_a > followers_b:
+        return 'a'
+    else:
+        return 'b'
 
 continue_game = True
 
