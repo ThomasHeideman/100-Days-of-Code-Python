@@ -11,3 +11,6 @@ for question in question_data:
 new_quiz = QuizBrain(question_bank)
 while new_quiz.still_has_questions():
     new_quiz.next_question()
+
+print("You've completed the quiz!")
+print(f"Your total score was {new_quiz.current_score}/{len(question_bank)}")
