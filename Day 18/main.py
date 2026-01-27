@@ -19,7 +19,7 @@ def random_color():
    return choice(color_palette)
 pen = Turtle()
 
-screen.setup(width=487, height=486)
+
 
 screen_width =screen.window_width()
 print(screen_width)
@@ -28,15 +28,10 @@ gap_size = 50 #(screen_width - dot_size) / 9
 
 total_distance = 9 * gap_size
 
-pos_x = -230 # -(total_distance / 2) - gap_size
-pos_y = -221 # -(total_distance / 2) - gap_size
-
-
-
-
+pos_x = -225 # -(total_distance / 2) - gap_size
+pos_y = -220 # -(total_distance / 2) - gap_size
 
 pen.penup()
-
 
 for row in range(10):
     current_y = pos_y + (row * gap_size)
