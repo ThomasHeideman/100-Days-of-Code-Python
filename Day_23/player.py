@@ -14,15 +14,14 @@ class Player(Turtle):
         self.goto(STARTING_POSITION)
 
     def go_forward(self):
-        current_y = self.ycor() + MOVE_DISTANCE
-        self.sety(current_y)
+        self.forward(MOVE_DISTANCE)
 
     def go_left(self):
-        new_x = self.xcor() - 20
+        new_x = self.xcor() - MOVE_DISTANCE
         self.goto(new_x, self.ycor())
 
     def go_right(self):
-        new_x = self.xcor() + 20
+        new_x = self.xcor() + MOVE_DISTANCE
         self.goto(new_x, self.ycor())
 
     def reset_player(self):
