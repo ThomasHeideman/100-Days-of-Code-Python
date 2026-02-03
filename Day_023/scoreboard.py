@@ -23,7 +23,7 @@ class Scoreboard(Turtle):
 
     def game_over(self):
         self.hideturtle()
-        self.clear()
+        # self.clear()
         self.color("black")
         self.goto(0, 0)
         self.write("GAME OVER", move=False, align=ALIGNMENT, font=FONT)
