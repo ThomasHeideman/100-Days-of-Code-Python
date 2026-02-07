@@ -86,16 +86,21 @@ def save_input():
 # ---------------------------- SEARCH PASSWORD ------------------------------- #
 def search():
     url = website_entry.get().lower()
-    with open("./data/data.json", "r") as data_file:
-        data = json.load(data_file)
-        try:
-            data[url]
-        except KeyError:
-            messagebox.showerror(title="Not Found", message=f"No records found for {url}")
-        else:
+
+    try:
+        with open("./data/data.json", "r") as data_file:
+            data = json.load(data_file)
+    except FileNotFoundError:
+        messagebox.showerror(title="Error", message=f"No Data File found")
+    else:
+        if url in data:
             messagebox.showinfo(title=f"Password for {url}",
                                 message=f"Email/User ID: {data[url]["user"]}\nPassword: {data[url]["password"]}\n Your password has been copied to the clipboard")
             copy(data[url]["password"])
+        else:
+            messagebox.showerror(title="Not Found", message=f"No records found for {url}")
+
+
 
 
 
