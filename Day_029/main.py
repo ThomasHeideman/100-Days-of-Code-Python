@@ -84,9 +84,11 @@ def search_password():
         url = website_entry.get().lower()
         df = pandas.read_csv("./data/data.csv")
         match = df[df["Url"] == url]
-        password = match["Password"].item()
-        user_id =match['User_id'].item()
-        print(f"Email/User ID: {user_id}\nPassword: {password}\n Your password has been copied to the clipboard")
+        if not match.empty:
+            password = match["Password"].item()
+            user_id =match['User_id'].item()
+        else:
+            messagebox.showwarning(title="Error", message=f"No details for {url} found.")
 
         messagebox.showinfo(title=f"Password for {url}", message=f"Email/User ID: {user_id}\nPassword: {password}\n Your password has been copied to the clipboard")
         copy(password)
