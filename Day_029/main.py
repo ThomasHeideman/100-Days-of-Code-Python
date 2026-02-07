@@ -38,7 +38,7 @@ def generate_password():
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save_input():
     new_data = {}
-    url = website_entry.get()
+    url = website_entry.get().lower()
     user = email_entry.get()
     password = password_entry.get()
 
@@ -81,7 +81,7 @@ def save_input():
 # ---------------------------- SEARCH PASSWORD ------------------------------- #
 def search_password():
     try:
-        url = website_entry.get()
+        url = website_entry.get().lower()
         df = pandas.read_csv("./data/data.csv")
         match = df[df["Url"] == url]
         password = match["Password"].item()
