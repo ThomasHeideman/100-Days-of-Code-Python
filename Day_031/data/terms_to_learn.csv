@@ -1,0 +1,49 @@
+Python Term,Meaning
+Variable,A container for storing data values.
+String,A sequence of characters surrounded by quotes.
+Integer,A whole number without decimals.
+Float,A number that contains a decimal point.
+Boolean,A data type that can only be True or False.
+List,A mutable ordered collection of items.
+Tuple,An immutable ordered collection of items.
+Dictionary,A collection of key-value pairs.
+Set,An unordered collection of unique items.
+Function,A reusable block of code that only runs when called.
+Argument,A value sent to a function when it is called.
+Global Variable,A variable created outside of a function.
+Local Variable,A variable created inside a function.
+Module,A file containing Python code and functions.
+Package,A directory containing multiple Python modules.
+PIP,The standard package manager for Python.
+Class,A blueprint for creating objects.
+Object,An instance of a class.
+Method,A function that belongs to an object.
+Inheritance,When a class derives properties from another class.
+Attribute,A variable that belongs to a class or object.
+__init__,A special method to initialize a new object.
+Loop,A way to repeat a block of code.
+Iteration,The process of looping through a sequence.
+Conditional,Statements like if-elif-else for decision making.
+Index,The position of an item in a list (starting at 0).
+Slicing,Extracting a part of a list or string.
+List Comprehension,A concise way to create lists in one line.
+Lambda,An anonymous one-line function.
+Exception,An error that happens during execution.
+Try-Except,A block used to handle errors and prevent crashes.
+Finally,A block that runs regardless of an exception.
+Raise,A way to force a specific error to occur.
+Comment,Text in code ignored by the interpreter (#).
+Docstring,A string used to document a function or class.
+PEP 8,The official style guide for Python code.
+Indentation,The spaces at the start of a code line (crucial!).
+Concatenation,Joining two or more strings together.
+Casting,Converting a variable from one type to another.
+Operator,Symbols like plus or minus used for operations.
+Keyword,Reserved words that cannot be used as names.
+,A special constant representing the absence of value.
+Range,A function that generates a sequence of numbers.
+Recursion,When a function calls itself.
+Scope,The region where a variable is recognized.
+Mutable,An object that can be changed after creation.
+Library,A collection of related modules and functions.
+Script,A file containing Python code to be executed.
