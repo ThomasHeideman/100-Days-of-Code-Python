@@ -1,7 +1,6 @@
 from tkinter import *
 import pandas
 import random
-
 import pandas as pd
 
 BACKGROUND_COLOR = "#1E2933"
@@ -10,11 +9,9 @@ flip_timer = None
 current_card = {}
 
 try:
-    # data = pandas.read_csv("./data/words_to_learn.csv")
-    data = pandas.read_csv("./data/terms_to_learn.csv")
+    data = pd.read_csv("./data/terms_to_learn.csv")
 except FileNotFoundError:
-    # data = pandas.read_csv("./data/french_words.csv")
-    data = pandas.read_csv("./data/python_terms.csv")
+    data = pd.read_csv("./data/python_terms.csv")
 
 words_to_learn = data.to_dict(orient="records")
 
