@@ -17,8 +17,8 @@ with open("quotes.txt") as file:
 
 # yahoo: smtp.mail.yahoo.com
 
-my_email = "thomaspythonproject26@gmail.com" #"xxx.xxx@gmail.com"
-password = "eihlrksfklfffosf" #XXXXXXXXXXXXXXXX
+my_email = "xxxxxxpythonprojectXXX@gmail.com"
+password = "xxxxxxxxxxxxxxxx"
 message = random.choice(lines)
 
 if day < 10:
