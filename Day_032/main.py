@@ -2,7 +2,7 @@ import random
 import smtplib
 import pandas
 import datetime as dt
-
+from secrets import password, my_email
 now = dt.datetime.now()
 year = now.year
 month = now.month
@@ -17,8 +17,6 @@ with open("quotes.txt") as file:
 
 # yahoo: smtp.mail.yahoo.com
 
-my_email = "xxxxxxpythonprojectXXX@gmail.com"
-password = "xxxxxxxxxxxxxxxx"
 message = random.choice(lines)
 
 if day < 10:

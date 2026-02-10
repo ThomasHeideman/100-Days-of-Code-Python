@@ -8,8 +8,7 @@ this_year = now.year
 this_month = now.month
 this_day = now.day
 
-my_email = "xxxxxxpythonprojectxxx@gmail.com"
-password = "XXXXXXXXXXXXXXXX"
+from secrets import password, my_email
 
 df = pandas.read_csv("birthdays.csv")
 today = (this_month,this_day)
