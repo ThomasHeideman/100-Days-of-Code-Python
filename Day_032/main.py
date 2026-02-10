@@ -2,7 +2,7 @@ import random
 import smtplib
 import pandas
 import datetime as dt
-from secrets import password, my_email
+from secrets import password, my_email, my_send_to_mail
 now = dt.datetime.now()
 year = now.year
 month = now.month
@@ -29,6 +29,6 @@ if day_of_week == 0 :
     with smtplib.SMTP("smtp.gmail.com",port=587) as connection:
         connection.starttls() # makes connection secure trough Transport Layer Security (TLS)
         connection.login(user=my_email,password=password)
-        connection.sendmail(from_addr=my_email, to_addrs="thomas.heideman@yahoo.com",msg=f"Subject:Monday Motivation {day} - {month} - {year}\n\n{message}")
+        connection.sendmail(from_addr=my_email, to_addrs=my_send_to_mail,msg=f"Subject:Monday Motivation {day} - {month} - {year}\n\n{message}")
 
 

@@ -8,7 +8,7 @@ this_year = now.year
 this_month = now.month
 this_day = now.day
 
-from secrets import password, my_email
+from secrets import password, my_email, my_send_to_mail
 
 df = pandas.read_csv("birthdays.csv")
 today = (this_month,this_day)
