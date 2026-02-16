@@ -24,7 +24,7 @@ def send_telegram_message(text):
 
 def get_news():
     news_parameters = {
-        "q": COMPANY_NAME,
+        "qInTitle": COMPANY_NAME,
         "from": YESTERDAY,
         "sortBy": "publishedAt",
         "apiKey": news_api_key
@@ -38,7 +38,7 @@ def send_news(diff):
     news_data = get_news()
     news = news_data["articles"][0:3]
     icon = "🔺" if diff > 0 else "🔻"
-    text_message = f'Tesla: {icon} {diff: .2f}%'
+    text_message = f'Tesla: {icon} {abs(diff): .2f}%'
     for news_item in news:
         title = f"<b>Headline:{news_item['title']}</b>"
         source = f"Source: {news_item['source']['name']}"
@@ -58,15 +58,15 @@ def get_stock_info():
     response = requests.get(url="https://www.alphavantage.co/query", params=parameters)
     response.raise_for_status()
     data = response.json()
-    data_list = [value for (key,value) in data.items()]
+
 
     if "Time Series (Daily)" in data:
         data_list = [value for (key, value) in data["Time Series (Daily)"].items()]
         last_closing = float(data_list[0]["4. close"])
         second_last_closing = float(data_list[1]["4. close"])
-        difference = abs(((last_closing - second_last_closing) / second_last_closing) * 100)
+        difference = ((last_closing - second_last_closing) / second_last_closing) * 100
 
-        if difference > 5:
+        if abs(difference) > 5:
             send_news(difference)
     else:
         print(f"Couldn't fetch data.  API Message: {data.get('Information', 'Unknown error')}")
