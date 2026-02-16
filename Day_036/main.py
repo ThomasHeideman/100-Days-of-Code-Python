@@ -66,7 +66,7 @@ def get_stock_info():
         second_last_closing = float(data_list[1]["4. close"])
         difference = abs(((last_closing - second_last_closing) / second_last_closing) * 100)
 
-        if difference > 0:
+        if difference > 5:
             send_news(difference)
     else:
         print(f"Couldn't fetch data.  API Message: {data.get('Information', 'Unknown error')}")
