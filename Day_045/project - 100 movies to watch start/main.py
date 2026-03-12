@@ -11,10 +11,8 @@ soup = BeautifulSoup(best_movies_website,"html.parser")
 
 
 movies = soup.find_all(name="h3", class_="title")
-movie_titles = []
-for movie in movies:
-    title = movie.get_text()
-    movie_titles.append(title)
+movie_titles = [movie.get_text() for movie in movies]
+print(movie_titles)
 movie_titles.reverse()
 
 for title in movie_titles:
