@@ -8,3 +8,6 @@ secrets.py
 # Negeer Python cache bestanden
 __pycache__/
 *.pyc
+/Day_039/.env
+/Day_040/.env
+/Day_046/.env
